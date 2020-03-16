@@ -12,12 +12,12 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 
 # config
 
-#. `dirname $0`/dotfiles.zsh
-#. `dirname $0`/scripts.sh
+. `dirname $0`/dotfiles.zsh
+. `dirname $0`/scripts.sh
 
 # macos
 
-#. `dirname $0`/fonts.sh
+. `dirname $0`/fonts.sh
 
 # apps
 
@@ -25,9 +25,9 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 
 . `dirname $0`/common.sh
 
-#. `dirname $0`/zsh.sh
-#. `dirname $0`/tmux.sh
-#. `dirname $0`/ranger.sh
+. `dirname $0`/zsh.sh
+. `dirname $0`/tmux.sh
+. `dirname $0`/ranger.sh
 . `dirname $0`/vim.sh
 
 . `dirname $0`/aws.sh $PENDRIVE
@@ -47,6 +47,10 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 . `dirname $0`/postman.sh
 . `dirname $0`/slack.sh
 . `dirname $0`/vscode.sh
+
+# dotfiles init
+
+. ~/.dotfiles.sh
 
 # cleanup
 

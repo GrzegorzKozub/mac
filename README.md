@@ -14,6 +14,8 @@ Fresh macOS config automation
 
 1. In System Preferences
   - disable Siri
+  - disable Spotlight Suggestions in Spotlight
+  - exclude home dir and pendrive from Spotlight
   - set your picture in Users & Groups
   - disable Screen Time
   - disable all options in Security & Privacy > Privacy > Analitycs & Improvements
@@ -38,9 +40,11 @@ Fresh macOS config automation
 
 ## Manual app config
 
-1. Setup Chrome
+1. Add apps to Dock
+2. Setup Chrome
   - Disable Command+Q quit warning
   - Enable enhanced spell check
   - Run `rm -rf ~/Applications/Chrome\ Apps.localized`
-2. Setup Dropbox
+3. Setup Dropbox
   - Exclude unwanted dirs from sync
+

@@ -2,8 +2,9 @@ set -e -o verbose
 
 # System Preferences > Dock
 
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock minimize-to-application-bool true
+#defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock mineffect -string 'scale'
+defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-others -array
 defaults write com.apple.dock show-recents -bool false
