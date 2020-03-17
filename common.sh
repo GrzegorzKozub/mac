@@ -6,6 +6,7 @@ brew install \
   bash \
   coreutils \
   curl \
+  diffutils \
   findutils \
   fzf \
   glances \
@@ -14,8 +15,7 @@ brew install \
   grep \
   jq \
   ripgrep \
-  wget \
-  xclip
+  wget
 
 brew cask install \
   wkhtmltopdf

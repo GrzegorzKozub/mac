@@ -47,7 +47,7 @@ osascript -e 'set Volume 3.5'
 
 defaults write -globalDomain KeyRepeat -int 2
 defaults write -globalDomain InitialKeyRepeat -int 35
-defaults write -globalDomain com.apple.keyboard.fnState -bool true
+# defaults write -globalDomain com.apple.keyboard.fnState -bool true
 
 # Finder
 
@@ -61,4 +61,12 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# exchange `/~ and §/£ keys
+
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+
+# remove the last login greeting
+
+touch ~/.hushlogin
 

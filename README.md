@@ -21,6 +21,7 @@ Fresh macOS config automation
   - disable all options in Security & Privacy > Privacy > Analitycs & Improvements
   - disable Bluetooth in Network
   - disable user interface sound effects in Sound
+  - make fn act like ctrl in Keyboard > Modifier Keys
   - enable Tap to click and Silent clicking in Trackpad
   - enable Night Shift in Displays
   - select backup disk in Time Machine
@@ -40,11 +41,13 @@ Fresh macOS config automation
 
 ## Manual app config
 
-1. Add apps to Dock
-2. Setup Chrome
+1. In System Preferences
+  - Select iTerm2 in Security & Privacy > Privacy > Full Disk Access
+2. Add apps to Dock
+3. Setup Chrome
   - Disable Command+Q quit warning
   - Enable enhanced spell check
   - Run `rm -rf ~/Applications/Chrome\ Apps.localized`
-3. Setup Dropbox
+4. Setup Dropbox
   - Exclude unwanted dirs from sync
 

@@ -4,3 +4,6 @@ set -e -o verbose
 
 brew install zsh zsh-completions
 
+compaudit | xargs chmod g-w
+chsh -s $(which zsh) greg
+
