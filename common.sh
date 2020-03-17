@@ -3,6 +3,7 @@ set -e -o verbose
 # common
 
 brew install \
+  bash \
   coreutils \
   curl \
   findutils \
@@ -13,7 +14,8 @@ brew install \
   grep \
   jq \
   ripgrep \
-  wget
+  wget \
+  xclip
 
 brew cask install \
   wkhtmltopdf
