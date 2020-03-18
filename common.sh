@@ -15,6 +15,7 @@ brew install \
   grep \
   jq \
   ripgrep \
+  stow \
   wget
 
 brew cask install \
