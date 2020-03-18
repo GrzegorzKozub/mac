@@ -1,6 +1,6 @@
 set -e -o verbose
 
-# nodejs
+# node
 
 brew install node
 

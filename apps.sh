@@ -36,7 +36,7 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 . `dirname $0`/dotnet.sh
 . `dirname $0`/elixir.sh
 . `dirname $0`/go.sh
-. `dirname $0`/nodejs.sh
+. `dirname $0`/node.sh
 . `dirname $0`/perl.sh
 . `dirname $0`/python.sh
 . `dirname $0`/ruby.sh
