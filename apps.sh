@@ -1,19 +1,20 @@
 set -e -o verbose
 
-# pendrive
+# validation
 
-PENDRIVE=$(mount | grep ARCH | sed -e 's/.*\ on\ //' | sed -e 's/\ (.*//')
-if [[ ! $PENDRIVE ]]; then exit 1; fi
+if [[ . == `dirname $0` ]]; then exit 1; fi
 
 # git
 
 . `dirname $0`/git.sh
-. `dirname $0`/openssh.sh $PENDRIVE
+. `dirname $0`/openssh.sh
 
-# config
+# dotfiles
 
 . `dirname $0`/dotfiles.zsh
-. `dirname $0`/scripts.sh
+
+. ~/code/dotfiles/init.sh
+. ~/code/keys/init.sh
 
 # macos
 
@@ -30,7 +31,7 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 . `dirname $0`/ranger.sh
 . `dirname $0`/vim.sh
 
-. `dirname $0`/aws.sh $PENDRIVE
+. `dirname $0`/aws.sh
 . `dirname $0`/docker.sh
 
 . `dirname $0`/dotnet.sh
@@ -43,16 +44,12 @@ if [[ ! $PENDRIVE ]]; then exit 1; fi
 
 . `dirname $0`/chrome.sh
 . `dirname $0`/dropbox.sh
-. `dirname $0`/keepass.sh $PENDRIVE
+. `dirname $0`/keepass.sh
 . `dirname $0`/postman.sh
 . `dirname $0`/slack.sh
 . `dirname $0`/vscode.sh
 
-# dotfiles init
+# plugins
 
-. ~/.dotfiles.sh
-
-# cleanup
-
-unset PENDRIVE
+. ~/code/dotfiles/plugins.sh
 

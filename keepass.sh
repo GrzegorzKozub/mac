@@ -4,5 +4,3 @@ set -e -o verbose
 
 brew cask install keepassxc
 
-cp -r $1/.mac/keys/keepass/greg.key ~
-
