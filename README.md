@@ -18,6 +18,7 @@ Fresh macOS config automation
   - exclude home dir and pendrive from Spotlight
   - set your picture in Users & Groups
   - disable Screen Time
+  - enable dragging in Accessability > Pointer Control > Trackpad Options
   - disable all options in Security & Privacy > Privacy > Analitycs & Improvements
   - disable Bluetooth in Network
   - disable user interface sound effects in Sound
