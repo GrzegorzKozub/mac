@@ -44,6 +44,7 @@ Fresh macOS config automation
 
 1. In System Preferences
   - Select iTerm2 in Security & Privacy > Privacy > Full Disk Access
+  - Select KeePassXC in Security & Privacy > Privacy > Accessability and Screen Recording
 2. Add apps to Dock
 3. Setup Chrome
   - Disable Command+Q quit warning
