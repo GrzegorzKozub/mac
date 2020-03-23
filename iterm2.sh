@@ -4,3 +4,6 @@ set -e -o verbose
 
 brew cask install iterm2
 
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2 PrefsCustomFolder "~/code/dotfiles/iterm2"
+
