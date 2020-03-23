@@ -23,6 +23,7 @@ Fresh macOS config automation
   - disable Bluetooth in Network
   - disable user interface sound effects in Sound
   - make fn act like ctrl in Keyboard > Modifier Keys
+  - disable Look up & data detectors in Trackpad
   - enable Tap to click and Silent clicking in Trackpad
   - enable Night Shift in Displays
   - select backup disk in Time Machine
