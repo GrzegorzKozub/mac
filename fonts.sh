@@ -5,6 +5,7 @@ set -e -o verbose
 brew tap homebrew/cask-fonts
 
 brew cask install \
-  font-fira-code \
-  font-firacode-nerd-font
+  font-fira-code
 
+# brew cask install \
+#   font-firacode-nerd-font
