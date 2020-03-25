@@ -9,10 +9,10 @@ brew install \
   diffutils \
   findutils \
   fzf \
+  glances \
   gnu-sed \
   graphviz \
   grep \
-  htop \
   jq \
   ripgrep \
   stow \
