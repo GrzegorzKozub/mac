@@ -44,6 +44,7 @@ Fresh macOS config automation
 ## Manual app config
 
 1. In System Preferences
+  - Remove Google Chrome from Users & Groups > Login Items
   - Select iTerm2 in Security & Privacy > Privacy > Full Disk Access
   - Select KeePassXC in Security & Privacy > Privacy > Accessability and Screen Recording
 2. Add apps to Dock
