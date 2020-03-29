@@ -4,5 +4,3 @@ set -e -o verbose
 
 brew install ruby
 
-gem install neovim --user-install
-
