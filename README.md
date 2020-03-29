@@ -40,6 +40,7 @@ Fresh macOS config automation
 3. Reboot
 4. Run `homebrew.sh` and close the terminal
 5. Run `apps.sh`
+6. Reboot
 
 ## Manual app config
 
