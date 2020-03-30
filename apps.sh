@@ -4,10 +4,11 @@ set -e -o verbose
 
 if [[ . == `dirname $0` ]]; then exit 1; fi
 
-# git
+# git and openssh
 
-. `dirname $0`/git.sh
-. `dirname $0`/openssh.sh
+brew install \
+  git \
+  openssh
 
 # dotfiles
 
@@ -16,37 +17,97 @@ if [[ . == `dirname $0` ]]; then exit 1; fi
 . ~/code/dotfiles/init.sh
 . ~/code/keys/init.sh
 
-# macos
+# fonts
 
-. `dirname $0`/fonts.sh
+brew tap homebrew/cask-fonts
+
+brew cask install \
+  font-fira-code
+
+# brew cask install \
+#   font-firacode-nerd-font
+
+# iterm2
+
+brew cask install \
+  iterm2
+
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2 PrefsCustomFolder "~/code/dotfiles/iterm2"
+
+# common
+
+brew install \
+  bash \
+  coreutils \
+  curl \
+  diffutils \
+  findutils \
+  fzf \
+  glances \
+  gnu-sed \
+  graphviz \
+  grep \
+  jq \
+  ripgrep \
+  stow \
+  wget
+
+brew cask install \
+  wkhtmltopdf
+
+# zsh, tmux and ranger
+
+brew install \
+  ranger \
+  tmux \
+  zsh zsh-completions
+
+compaudit | xargs chmod g-w
+chsh -s $(which zsh) greg
+
+# vim and neovim
+
+brew install \
+  astyle ctags editorconfig hadolint tidy-html5 vim \
+  neovim
+
+# docker
+
+brew cask install \
+  docker
+
+sed -i 's/"autoStart" : true/"autoStart" : false/' \
+  ~/Library/Group\ Containers/group.com.docker/settings.json
+sed -i 's/"checkForUpdates" : true/"checkForUpdates" : false/' \
+  ~/Library/Group\ Containers/group.com.docker/settings.json
+sed -i 's/"analyticsEnabled" : true/"analyticsEnabled" : false/' \
+  ~/Library/Group\ Containers/group.com.docker/settings.json
+
+# aws
+
+brew install \
+  awscli
+
+# dev
+
+brew cask install \
+  dotnet-sdk \
+  elixir \
+  go \
+  node \
+  perl \
+  python \
+  ruby
 
 # apps
 
-. `dirname $0`/iterm2.sh
-
-. `dirname $0`/common.sh
-
-. `dirname $0`/zsh.sh
-. `dirname $0`/tmux.sh
-. `dirname $0`/ranger.sh
-. `dirname $0`/vim.sh
-
-. `dirname $0`/aws.sh
-. `dirname $0`/docker.sh
-
-. `dirname $0`/dotnet.sh
-. `dirname $0`/elixir.sh
-. `dirname $0`/go.sh
-. `dirname $0`/node.sh
-. `dirname $0`/perl.sh
-. `dirname $0`/python.sh
-. `dirname $0`/ruby.sh
-
-. `dirname $0`/chrome.sh
-. `dirname $0`/keepass.sh
-. `dirname $0`/postman.sh
-. `dirname $0`/slack.sh
-. `dirname $0`/vscode.sh
+brew cask install \
+  google-chrome \
+  keepassxc \
+  postman \
+  slack \
+  visual-studio-code
 
 # plugins
 
