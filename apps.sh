@@ -91,14 +91,16 @@ brew install \
 
 # dev
 
-brew cask install \
-  dotnet-sdk \
+brew install \
   elixir \
   go \
   node \
   perl \
   python \
   ruby
+
+brew cask install \
+  dotnet-sdk
 
 # apps
 
