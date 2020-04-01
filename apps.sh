@@ -105,6 +105,9 @@ brew cask install \
 
 # apps
 
+brew install \
+  openconnect
+
 brew cask install \
   google-chrome \
   keepassxc \
