@@ -27,9 +27,10 @@ brew cask install \
 # brew cask install \
 #   font-firacode-nerd-font
 
-# iterm2
+# terminal
 
 brew cask install \
+  alacritty \
   iterm2
 
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
