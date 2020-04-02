@@ -54,6 +54,4 @@ Fresh macOS config automation
   - Disable Command+Q quit warning
   - Enable enhanced spell check
   - Run `rm -rf ~/Applications/Chrome\ Apps.localized`
-4. Setup Dropbox
-  - Exclude unwanted dirs from sync
 
