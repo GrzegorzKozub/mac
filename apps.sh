@@ -43,6 +43,7 @@ brew install \
   coreutils \
   curl \
   diffutils \
+  fd \
   findutils \
   fzf \
   glances \
