@@ -47,7 +47,7 @@ osascript -e 'set Volume 3.5'
 
 defaults write -globalDomain KeyRepeat -int 2
 defaults write -globalDomain InitialKeyRepeat -int 35
-defaults write -globalDomain com.apple.keyboard.fnState -bool true
+# defaults write -globalDomain com.apple.keyboard.fnState -bool true
 
 # Finder
 
