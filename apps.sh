@@ -106,8 +106,11 @@ brew cask install \
 
 # apps
 
+brew tap \
+  horar/openconnect-gui
+
 brew install \
-  openconnect
+  openconnect openconnect-gui
 
 brew cask install \
   google-chrome \
