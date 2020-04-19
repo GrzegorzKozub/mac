@@ -1,8 +1,10 @@
+#!/usr/bin/env zsh
+
 set -e -o verbose
 
 # validation
 
-if [[ . == `dirname $0` ]]; then exit 1; fi
+[[ . = `dirname $0` ]] && exit 1
 
 # git and openssh
 
@@ -14,8 +16,8 @@ brew install \
 
 . `dirname $0`/dotfiles.zsh
 
-. ~/code/dotfiles/init.sh
-. ~/code/keys/init.sh
+. ~/code/dotfiles/init.zsh
+. ~/code/keys/init.zsh
 
 # fonts
 
@@ -121,5 +123,5 @@ brew cask install \
 
 # plugins
 
-. ~/code/dotfiles/plugins.sh
+. ~/code/dotfiles/plugins.zsh
 

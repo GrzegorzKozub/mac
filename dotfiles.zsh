@@ -5,9 +5,9 @@ set -e -o verbose
 # temporary keys
 
 PENDRIVE=$(mount | grep ARCH | sed -e 's/.*\ on\ //' | sed -e 's/\ (.*//')
-if [[ ! $PENDRIVE ]]; then exit 1; fi
+[[ $PENDRIVE ]] || exit 1
 
-if [ ! -d ~/.ssh ]; then mkdir ~/.ssh; fi
+[[ -d ~/.ssh ]] || mkdir ~/.ssh
 
 cp $PENDRIVE/.bootstrap/keys/openssh/.ssh/config ~/.ssh
 chmod 600 ~/.ssh/config
@@ -19,23 +19,23 @@ unset PENDRIVE
 
 # repos
 
-if [ ! -d ~/code ]; then mkdir ~/code; fi
+[[ -d ~/code ]] || mkdir ~/code
 
-if [ -d ~/code/arch ]; then rm -rf ~/code/arch; fi
+[[ -d ~/code/arch ]] && rm -rf ~/code/arch
 git clone git@github.com:GrzegorzKozub/arch.git ~/code/arch
 
-if [ -d ~/code/dotfiles ]; then rm -rf ~/code/dotfiles; fi
+[[ -d ~/code/dotfiles ]] && rm -rf ~/code/dotfiles
 git clone --recursive git@github.com:GrzegorzKozub/dotfiles.git ~/code/dotfiles
 
-if [ -d ~/code/keys ]; then rm -rf ~/code/keys; fi
+[[ -d ~/code/keys ]] && rm -rf ~/code/keys
 git clone git@github.com:GrzegorzKozub/keys.git ~/code/keys
 
-if [ -d ~/code/mac ]; then rm -rf ~/code/mac; fi
+[[ -d ~/code/mac ]] && rm -rf ~/code/mac
 git clone git@github.com:GrzegorzKozub/mac.git ~/code/mac
 
-if [ -d ~/code/passwords ]; then rm -rf ~/code/passwords; fi
+[[ -d ~/code/passwords ]] && rm -rf ~/code/passwords
 git clone git@github.com:GrzegorzKozub/passwords.git ~/code/passwords
 
-if [ -d ~/code/themes ]; then rm -rf ~/code/themes; fi
+[[ -d ~/code/themes ]] && rm -rf ~/code/themes
 git clone git@github.com:GrzegorzKozub/themes.git ~/code/themes
 

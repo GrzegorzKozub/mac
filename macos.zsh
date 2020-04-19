@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 set -e -o verbose
 
 # System Preferences > Dock

@@ -36,11 +36,11 @@ Fresh macOS config automation
 
 ## Scripted config
 
-1. Once per macOS installation run `system.sh`
-2. Run `macos.sh`
+1. Once per macOS installation run `system.zsh`
+2. Run `macos.zsh`
 3. Reboot
-4. Run `homebrew.sh` and close the terminal
-5. Run `apps.sh`
+4. Run `homebrew.zsh` and close the terminal
+5. Run `apps.zsh`
 6. Reboot
 
 ## Manual app config
