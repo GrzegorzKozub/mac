@@ -10,6 +10,8 @@ set -e -o verbose
 
 brew install \
   git \
+  git-extras \
+  git-flow-avh \
   openssh
 
 # dotfiles
@@ -55,6 +57,8 @@ brew install \
   jq \
   ripgrep \
   stow \
+  trash-cli \
+  unison \
   wget
 
 brew cask install \
@@ -63,6 +67,7 @@ brew cask install \
 # zsh, tmux and ranger
 
 brew install \
+  lf \
   ranger \
   tmux \
   zsh zsh-completions
